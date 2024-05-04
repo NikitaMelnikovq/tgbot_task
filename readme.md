@@ -1,11 +1,22 @@
-Здравствуйте, спасибо, что уделили мне своё время!
+# Telegram Bot Project
 
-Для разработки бота использовался python версии 3.11, все необходимые модули для работы бота можно найти в файле requirements.txt.
+## Overview
+This Python project utilizes Python 3.11 and various modules listed in the `requirements.txt` file to create a Telegram bot. The bot interacts with users and manages tasks stored in a database.
 
-Таблица tasks состоит из следующих полей: айди задачи(id), айди пользователя(user_id), к которому привязана задача, заголовок задачи(title) и её описание(description).
+## Table Structure
+There are two tables in the database:
 
-Также есть таблица users с одним полем - user_id, это - все пользователи, использующие нашего бота.
+### Tasks Table
+- **id**: Unique identifier for each task.
+- **user_id**: User ID associated with the task.
+- **title**: Title of the task.
+- **description**: Description of the task.
 
-Обращаю внимание, что user_id - это поле с типом BIGINT (поскольку не все айди пользователей телеграмм помещаются в INT)
+### Users Table
+- **user_id**: Unique identifier for each user. This field is of type BIGINT to accommodate larger user IDs from Telegram.
 
-По всем вопросам(если вдруг не запускается или что-то идёт не так, писать в телеграмм - @n1sq6).
+## Usage
+
+1. Install the required Python modules:
+   ```bash
+   pip install -r requirements.txt
